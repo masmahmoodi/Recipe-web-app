@@ -38,7 +38,7 @@ export default function Search(props){
     return(
      <>
         <form onSubmit={handleSubmit}>
-            <h2>Your desired dishes?</h2>
+            <h2>Search for Meals</h2>
             <input 
                    placeholder="Search recipe"
                    type="search" 
