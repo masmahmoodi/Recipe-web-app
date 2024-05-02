@@ -13,8 +13,7 @@ header img{
 header,
 .hero,
 .cards,
-ol,
-.search-and-ingredients{
+ol{
     align-items: center;
 
 }
@@ -22,12 +21,11 @@ header,
 .hero,
 .cards,
 ol,
-.cards div,
-.search-and-ingredients{
+.search-and-ingredients,
+.cards div{
     display: flex;
+
 }
-
-
 
 header {
     padding: 10px 0;
@@ -39,7 +37,6 @@ header,
 .beautiful-list li,
 form button{
     background: linear-gradient(to right, #fd5c63, #ff9966);
-
 }
 
 header strong,
@@ -134,7 +131,6 @@ form button{
     position: absolute;
 }
 
-
 .one{
     background-size:cover;
     background-position: center;
@@ -209,7 +205,7 @@ video{
     position: relative;
   }
   
- 
+  
 .about-ingredients{
     text-align: center;
 }
