@@ -1,4 +1,3 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); */
 *,
 #root{
     margin: 0;
@@ -13,11 +12,22 @@ header img{
 
 header,
 .hero,
-.cards{
-    display: flex;
+.cards,
+ol,
+.search-and-ingredients{
     align-items: center;
 
 }
+header,
+.hero,
+.cards,
+ol,
+.cards div,
+.search-and-ingredients{
+    display: flex;
+}
+
+
 
 header {
     padding: 10px 0;
@@ -32,14 +42,6 @@ form button{
 
 }
 
-/* form button{
-    background-color:#fd5c63;
-}
-
-.beautiful-list li{
-    background-color:#fd5c63;
-} */
-
 header strong,
 header i{
     font-size: 50px;
@@ -48,8 +50,6 @@ header i{
 
 .hero{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1518133683791-0b9de5a055f0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-    /* background-image:url('./src/assets/images/hero-img.jpg'); */
-    /* background-image: */
     background-position: center;
     background-size: cover;
     color: white;
@@ -66,19 +66,14 @@ header i{
 }
 
 .search-and-ingredients{
-    display: flex;
-    /* align-items: center; */
     background-color: gray;
-
 }
-
 
 .cards div{
     text-align: center;
     width: 200px;
     height: 240px;
     border-radius: 10px;
-    display: flex;
     align-items: end;
     justify-content: center;
     box-shadow: 10px 10px 30px gray;
@@ -99,18 +94,15 @@ header i{
     flex-wrap: wrap;
     justify-content: center;
     color: white;
-    /* background-color: rebeccapurple; */
 }
 form{
      margin: 20px 0 30px 0;
      text-align: center;
-     /* background-color: #FB6D48; */
 }
 
 label{
     font-size: 25px;
 }
-
 
 form input,button{
     font-family: "Inter", sans-serif;
@@ -122,11 +114,9 @@ form input,button{
 }
 
 form input{
-   /* background-color: aqua; */
    width: 80%;
    position: relative;
    box-shadow: 0 0 10px gray;
-   
 }
 
 form button{
@@ -150,6 +140,8 @@ form button{
     background-position: center;
 }
 
+/* dummy data */
+
 .dummy1{
     background-image: url('https://www.oprah.com/g/image-resizer?width=670&link=https://static.oprah.com/images/201302/orig/201302-orig-beautiful-chicken-600x411.jpg');
 
@@ -171,8 +163,6 @@ form button{
 .dummy6{
     background-image: url('https://miro.medium.com/v2/resize:fit:1400/0*VY3fJv4aiVMmX0WL');
 }
-
-
 
 .meals,
 .ingredients-info{
@@ -202,8 +192,6 @@ video{
   }
 
   ol{
-    display: flex;
-    align-items: center;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
@@ -211,7 +199,6 @@ video{
   
   .beautiful-list li {
     flex-grow: 1;
-    /* width: 30%; */
     margin-bottom: 15px;
     padding: 15px;
     border-radius: 50px;
@@ -222,15 +209,7 @@ video{
     position: relative;
   }
   
-  /* .beautiful-list li:before {
-    font-size: 16px;
-    position: absolute;
-    left: -30px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: rgba(255, 255, 255, 0.8); Bullet point color
-  } */
-  
+ 
 .about-ingredients{
     text-align: center;
 }
