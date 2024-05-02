@@ -1,0 +1,297 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); */
+*,
+#root{
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+    box-sizing: border-box;
+}
+
+header img{
+    width: 200px;
+}
+
+header,
+.hero,
+.cards{
+    display: flex;
+    align-items: center;
+
+}
+
+header {
+    padding: 10px 0;
+    justify-content: center;
+    color: #fff;
+
+}
+header,
+.beautiful-list li,
+form button{
+    background: linear-gradient(to right, #fd5c63, #ff9966);
+
+}
+
+/* form button{
+    background-color:#fd5c63;
+}
+
+.beautiful-list li{
+    background-color:#fd5c63;
+} */
+
+header strong,
+header i{
+    font-size: 50px;
+    color: white;
+}
+
+.hero{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1518133683791-0b9de5a055f0?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    /* background-image:url('./src/assets/images/hero-img.jpg'); */
+    /* background-image: */
+    background-position: center;
+    background-size: cover;
+    color: white;
+    height: 70vh;
+    justify-content: center;
+}
+
+.hero div{
+    text-align: center;
+    padding: 20px;
+}
+.hero div p{
+    max-width: 800px;
+}
+
+.search-and-ingredients{
+    display: flex;
+    /* align-items: center; */
+    background-color: gray;
+
+}
+
+
+.cards div{
+    text-align: center;
+    width: 200px;
+    height: 240px;
+    border-radius: 10px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    box-shadow: 10px 10px 30px gray;
+}
+
+.cards div:hover,
+.beautiful-list li:hover {
+   
+    box-shadow: 0 0 20px rgba(62, 62, 239, 0.598);
+}
+
+.cards div span{
+    margin-bottom: 20px;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.234);
+}
+
+.cards{
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    /* background-color: rebeccapurple; */
+}
+form{
+     margin: 20px 0 30px 0;
+     text-align: center;
+     /* background-color: #FB6D48; */
+}
+
+label{
+    font-size: 25px;
+}
+
+
+form input,button{
+    border: none;
+    outline: none;
+    padding: 15px 10px;
+    border-radius: 15px;
+}
+
+form input{
+   /* background-color: aqua; */
+   width: 80%;
+   position: relative;
+   box-shadow: 0 0 10px gray;
+}
+
+form button{
+    width:100px;
+    margin-left: -100px;
+    color: white;
+} 
+
+form button:active{
+  transform: scale(0.95); 
+}
+
+.utensils,
+form button{
+    position: absolute;
+}
+
+
+.one{
+    background-size:cover;
+    background-position: center;
+}
+
+.dummy1{
+    background-image: url('https://www.oprah.com/g/image-resizer?width=670&link=https://static.oprah.com/images/201302/orig/201302-orig-beautiful-chicken-600x411.jpg');
+
+}
+ .dummy2{
+    background-image: url('https://i.insider.com/5d4203fb36e03c28a1020308?width=700');
+}
+
+ .dummy3{
+    background-image: url('https://loveincorporated.blob.core.windows.net/contentimages/gallery/5042cb85-5a72-44ad-aa35-fd7893ff9f36-11%20sliceofpai.jpg');
+}
+
+ .dummy4{
+    background-image: url('https://expertphotography.b-cdn.net/wp-content/uploads/2019/01/food-photography-blogs-Pancake-pour.jpg');
+}
+.dummy5{
+    background-image: url('https://img.veenaworld.com/wp-content/uploads/2022/10/Famous-Foods-of-Mysore-%E2%80%93-Dishes-You-Should-Try-on-Your-Next-Vacation-scaled-e1669227495862.jpg');
+}
+.dummy6{
+    background-image: url('https://miro.medium.com/v2/resize:fit:1400/0*VY3fJv4aiVMmX0WL');
+}
+
+
+
+.meals,
+.ingredients-info{
+    background-color: #e8eaf6;
+}
+
+.ingredients-info,
+.meals{
+    width: 50%;
+    padding: 10px;
+}
+
+video{
+    width: 100%;
+    height: 300px;
+    background-color: black;
+}
+
+.list-container {
+    width: 100%;
+    margin: 20px auto;
+  }
+  
+  .beautiful-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  ol{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  
+  .beautiful-list li {
+    flex-grow: 1;
+    /* width: 30%; */
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    color: white;
+    position: relative;
+  }
+  
+  /* .beautiful-list li:before {
+    font-size: 16px;
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.8); Bullet point color
+  } */
+  
+.about-ingredients{
+    text-align: center;
+}
+
+h2{
+    font-size:25px;
+}
+
+h3{
+    font-size: 20px;
+}
+
+h1{
+    font-size: 30px;
+}
+p{
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+.about-ingredients h3,
+form h2{
+    margin-bottom: 10px;
+}
+
+/* Mobile */
+@media(max-width:480px){
+    form input{
+        width: 100%;
+    }
+    .cards div{
+        width: 80%;
+    }
+}
+
+/* Tablet */
+@media(max-width:900px){
+    form input{
+        width: 100%;
+    }
+
+    .cards div{
+        width: 90%;
+    }
+}
+
+
+
+/* tablet */
+@media (max-width:768px){
+    .search-and-ingredients{
+        flex-direction: column;
+    }
+    form input{
+        width: 80%;
+    }
+    .cards div{
+        width: 60%;
+    }
+    .meals,
+    .ingredients-info{
+        width: 100%;
+    }
+}
+
