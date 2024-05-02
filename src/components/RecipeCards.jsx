@@ -1,16 +1,22 @@
-import React from "react"
+import React from "react";
 
+export default function RecipeCards(props) {
+    const handleClick = () => {
+    const ingredientsInfoElement = document.querySelector(".ingredients-info");
+    if (ingredientsInfoElement) {
+      ingredientsInfoElement.scrollIntoView({ behavior: "smooth" });
+    }
+    props.handleClick(props.meal.idMeal);
+  }
 
-export default function RecipeCards(props){
-    // console.log(props)
-    // console.log(props.meal.strMealThumb)
-    return(
-            <div className="one"  
-                     style={{ backgroundImage: `url(${props.meal.strMealThumb})` }}
-                     onClick={()=>props.handleClick(props.meal.idMeal)}  
-                     data-aos="zoom-in-down"  >
-           
-                <span>{props.meal.strMeal}</span>
-            </div>
-    )
+  return (
+    <div
+      className="one"
+      style={{ backgroundImage: `url(${props.meal.strMealThumb})` }}
+      onClick={handleClick}
+      data-aos="zoom-in-down"
+    >
+      <span>{props.meal.strMeal}</span>
+    </div>
+  )
 }
