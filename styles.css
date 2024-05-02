@@ -86,7 +86,6 @@ header i{
 
 .cards div:hover,
 .beautiful-list li:hover {
-   
     box-shadow: 0 0 20px rgba(62, 62, 239, 0.598);
 }
 
@@ -114,10 +113,12 @@ label{
 
 
 form input,button{
+    font-family: "Inter", sans-serif;
     border: none;
     outline: none;
     padding: 15px 10px;
     border-radius: 15px;
+    font-size: 16px;
 }
 
 form input{
@@ -125,6 +126,7 @@ form input{
    width: 80%;
    position: relative;
    box-shadow: 0 0 10px gray;
+   
 }
 
 form button{
@@ -261,25 +263,12 @@ form h2{
         width: 100%;
     }
     .cards div{
-        width: 80%;
-    }
-}
-
-/* Tablet */
-@media(max-width:900px){
-    form input{
         width: 100%;
     }
-
-    .cards div{
-        width: 90%;
-    }
 }
 
-
-
-/* tablet */
-@media (max-width:768px){
+ /* Tablet */
+@media(max-width:768px){
     .search-and-ingredients{
         flex-direction: column;
     }
@@ -294,4 +283,16 @@ form h2{
         width: 100%;
     }
 }
+
+/* Tablet  */
+@media(max-width:900px){
+    form input{
+        width: 100%;
+    }
+    
+    .cards div{
+        width: 90%;
+    }
+}
+
 
