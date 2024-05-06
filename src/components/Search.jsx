@@ -1,17 +1,23 @@
 import React from "react"
 import RecipeCards from "./RecipeCards"
-import Dummy from "./DummyCards"
 
 export default function Search(props){
     
     const [getMeals,setMeals] = React.useState([])
     const [mealName,setMealName] = React.useState("")
     const [inputValue,setInputValue] = React.useState("")
+
+    function fetchingMeals(name){
+        fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${name}`)
+        .then(res => res.json())
+        .then(data => setMeals(data.meals))
+    }
+
     React.useEffect(()=>{
         if(inputValue){
-            fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${inputValue}`)
-            .then(res => res.json())
-            .then(data => setMeals(data.meals))
+           fetchingMeals(inputValue)
+        }else{
+            fetchingMeals("beef")
         }
 
     },[inputValue])
@@ -50,7 +56,7 @@ export default function Search(props){
             <button><i className="fa-solid fa-magnifying-glass"></i> Search</button>
         </form>
       <div className="cards">
-         {getMeals.length > 0 ? cardsArray :  <Dummy /> }
+         { cardsArray}
       </div>
      </>
     )

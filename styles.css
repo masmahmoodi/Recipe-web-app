@@ -171,12 +171,30 @@ form button{
     padding: 10px;
 }
 
-video{
+
+.youtube-video {
     width: 100%;
-    height: 300px;
-    background-color: black;
+    height: 100%;
 }
 
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+  
 .list-container {
     width: 100%;
     margin: 20px auto;
@@ -231,6 +249,21 @@ p{
 form h2{
     margin-bottom: 10px;
 }
+
+
+
+footer{
+    background-color: #fafafa;
+    text-align: center;
+    padding:20px 0px;
+}
+
+footer i {
+    color: #333333;
+    font-size: 30px;
+    margin-right: 20px;
+}
+
 
 /* Mobile */
 @media(max-width:480px){

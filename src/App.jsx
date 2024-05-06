@@ -3,7 +3,8 @@ import Header from "./components/Header"
 import Hero from "./components/Hero"
 import Search from "./components/Search"
 import Ingredients  from "./components/Ingredients"
-import DummyIngredients from "./components/DummyIngredients"
+import Footer from "./components/Footer"
+
 export default function App(){
   const [getId,setId] = React.useState(null)
   const [ingredientsInfo,setIngredientsInfo] = React.useState([])
@@ -11,12 +12,17 @@ export default function App(){
     setId(id);
   }
 
+  function fetchingMealsId(getId){
+    fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${getId}`)
+    .then(res => res.json())
+    .then(data => setIngredientsInfo(data.meals[0]))
+  }
+
   React.useEffect(() => {
     if (getId) {
-      console.log(getId)
-      fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${getId}`)
-      .then(res => res.json())
-      .then(data => setIngredientsInfo(data.meals[0]))
+      fetchingMealsId(getId)
+    }else{
+      fetchingMealsId("52938")
     }
   }, [getId])
 
@@ -30,10 +36,11 @@ export default function App(){
                   <Search  handleClick={handleClick}/>
                 </div>
                 <div className="ingredients-info">
-                  {ingredientsInfo && Object.keys(ingredientsInfo).length > 0 ? <Ingredients data={ingredientsInfo} />:  <DummyIngredients /> }
+                  {ingredientsInfo && Object.keys(ingredientsInfo).length > 0  && <Ingredients data={ingredientsInfo} />}
                 </div>
            </section>
          </main>
+         <Footer />
 
      </>
 
